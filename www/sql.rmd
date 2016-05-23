@@ -1,0 +1,12 @@
+CREATE TABLE teacher (
+    -> id_teacher INTEGER UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    -> name VARCHAR(100),
+    -> discipline INTEGER UNSIGNED NOT NULL,
+    -> FOREIGN KEY (discipline) REFERENCES disciplina(id_disciplina));
+
+
+CREATE TABLE discipline (
+    id_discipline INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+    name VARCHAR(100) NULL,
+    PRIMARY KEY(id_discipline)
+);
