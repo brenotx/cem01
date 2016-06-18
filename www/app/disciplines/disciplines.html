@@ -1,0 +1,9 @@
+<ion-view ng-controller="DisciplinesCtrl" view-title="Disciplinas">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="discipline in disciplineList" href="#/app/playlists/{{playlist.id}}">
+        {{discipline.name}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

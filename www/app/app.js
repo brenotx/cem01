@@ -8,7 +8,8 @@
         .module('starter', [
             'ionic',
             'starter.controllers',
-            'login'])
+            'login',
+            'disciplines'])
 
         .run(function($ionicPlatform) {
             $ionicPlatform.ready(function() {
@@ -40,19 +41,19 @@
                 templateUrl: 'templates/menu.html',
                 controller: 'AppCtrl'
             })
-            .state('app.disciplinas', {
-                url: '/disciplinas',
+            .state('app.disciplines', {
+                url: '/disciplines',
                 views: {
                     'menuContent': {
-                        templateUrl: 'js/disciplinas/disciplinas.html'
+                        templateUrl: 'app/disciplines/disciplines.html'
                     }
                 }
             })
-            .state('app.noticias', {
-                url: '/noticias',
+            .state('app.news', {
+                url: '/news',
                 views: {
                     'menuContent': {
-                        templateUrl: 'js/noticias/noticias.html'
+                        templateUrl: 'app/news/news.html'
                     }
                 }
             })
