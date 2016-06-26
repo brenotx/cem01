@@ -1,9 +1,18 @@
-<ion-view ng-controller="DisciplinesCtrl" view-title="Disciplinas">
-  <ion-content>
-    <ion-list>
-      <ion-item ng-repeat="discipline in disciplineList" href="#/app/playlists/{{playlist.id}}">
-        {{discipline.name}}
-      </ion-item>
-    </ion-list>
-  </ion-content>
+<ion-view ng-controller="DisciplinesCtrl as vm" view-title="Disciplinas">
+	<ion-content>
+		<ion-list>
+			<ion-item ng-repeat="discipline in vm.disciplineList" href="#/app/playlists/{{playlist.id}}">
+				{{discipline.name}}
+			</ion-item>
+		</ion-list>
+		<label>Código:</label>
+		<input type="text" name="" ng-model="vm.disciplineCode" placeholder="Código">
+		<br>
+		<label>Nome:</label>
+		<input type="text" name="" ng-model="vm.disciplineName" placeholder="Nome">
+		<input type="button" ng-click="vm.addDiscipline()" value="Enviar">
+	</ion-content>
+	<button class="button button-float" ng-click="vm.gotoAddForm();">
+		<i class="icon ion-plus"></i>
+	</button>
 </ion-view>

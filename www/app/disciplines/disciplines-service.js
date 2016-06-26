@@ -11,7 +11,8 @@
     function disciplinesService($http) {
         var service = {
         	addDiscipline: addDiscipline, 
-            getDisciplines: getDisciplines
+            getDisciplines: getDisciplines,
+            addTeacher: addTeacher
         };
         return service;
 
@@ -23,6 +24,10 @@
 
         function addDiscipline(discipline) {
         	return $http.post('http://localhost:8080/cem01/API/discipline/cadastrar', discipline);
+        }
+
+        function addTeacher(teacher) {
+            return $http.post('http://localhost:8080/cem01/API/teacher/add', teacher);
         }
     }
 })();
